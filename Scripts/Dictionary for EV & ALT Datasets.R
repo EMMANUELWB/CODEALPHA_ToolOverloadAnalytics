@@ -1,10 +1,7 @@
-# ===============================================================
-# 📘 Data Dictionary for EV & ALT Datasets
-# Author: Emmanuel Agbo
 # Purpose: Define meaning, type, and expectations for each column
-# ===============================================================
 
-# ---- Electric Vehicle (EV) Population Dictionary ----
+
+# Electric Vehicle (EV) Population Dictionary
 ev_dictionary <- data.frame(
   Column_Name = c(
     "VIN_(1-10)", "County", "City", "State", "Postal_Code", "Model_Year", 
@@ -51,7 +48,7 @@ ev_dictionary <- data.frame(
   )
 )
 
-# ---- Alternative Fuel (ALT) Station Dictionary ----
+# Alternative Fuel (ALT) Station Dictionary
 alt_dictionary <- data.frame(
   Column_Name = c(
     "Fuel_Type_Code", "Station_Name", "Street_Address", "Intersection_Directions",
@@ -98,7 +95,7 @@ alt_dictionary <- data.frame(
   )
 )
 
-# ---- Export dictionaries ----
+# Export dictionaries
 write.csv(ev_dictionary, "EV_Data_Dictionary.csv", row.names = FALSE)
 write.csv(alt_dictionary, "ALT_Data_Dictionary.csv", row.names = FALSE)
 
