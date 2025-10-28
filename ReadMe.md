@@ -22,7 +22,7 @@ To explore the relationship between EV adoption and the accessibility of chargin
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
 | Folder          | Description                                   |
 | --------------- | --------------------------------------------- |
@@ -36,7 +36,7 @@ To explore the relationship between EV adoption and the accessibility of chargin
 
 ---
 
-## 🧹 Data Cleaning and Profiling Summary
+## Data Cleaning and Profiling Summary
 
 ### Electric Vehicle (EV) Dataset
 - Handled missing values and standardized column names.  
@@ -100,7 +100,7 @@ Download the full repository as a ZIP file:
 
 ---
 
-## 🎥 Project Video
+## Project Video
 A short walkthrough video (to be posted on LinkedIn) will explain:
 - Project overview and goals  
 - Data sources and cleaning steps  
