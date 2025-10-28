@@ -1,14 +1,9 @@
-###########################################################
-#  CODEALPHA_ToolOverloadAnalytics
-#  Script: Course_Metadata_Scraper.R
+
 #  Purpose: Scrape public "Data Analytics" course metadata
 #           from Coursera, Udemy, edX, and FutureLearn.
-#  Author:  Agbo Emmanuel
-#  ---------------------------------------------------------
-#  Output:  ../Data/Course_Info.csv
-###########################################################
 
-# ---- Libraries ----
+
+# Libraries 
 library(rvest)
 library(dplyr)
 library(purrr)
@@ -20,9 +15,9 @@ clean_text <- function(x) {
   return(x)
 }
 
-# =========================================================
-# 1️⃣  SCRAPE COURSERA
-# =========================================================
+
+# SCRAPE COURSERA
+
 cat("Scraping Coursera...\n")
 
 coursera_url <- "https://www.coursera.org/search?query=data%20analytics"
@@ -43,9 +38,9 @@ coursera_df <- data.frame(
   URL         = paste0("https://www.coursera.org", coursera_links[1:length(coursera_titles)])
 )
 
-# =========================================================
-# 2️⃣  SCRAPE UDEMY
-# =========================================================
+
+# SCRAPE UDEMY
+
 cat("Scraping Udemy...\n")
 
 udemy_url <- "https://www.udemy.com/courses/search/?q=data%20analytics"
@@ -64,9 +59,9 @@ udemy_df <- data.frame(
   URL         = paste0("https://www.udemy.com", udemy_links[1:length(udemy_titles)])
 )
 
-# =========================================================
-# 3️⃣  SCRAPE EDX
-# =========================================================
+
+#  SCRAPE EDX
+
 cat("Scraping edX...\n")
 
 edx_url <- "https://www.edx.org/search?q=data+analytics"
@@ -104,9 +99,8 @@ future_df <- data.frame(
   URL         = paste0("https://www.futurelearn.com", future_links[1:length(future_titles)])
 )
 
-# =========================================================
-# 5️⃣  COMBINE ALL DATASETS
-# =========================================================
+
+#  COMBINE ALL DATASETS
 cat("Combining all platforms...\n")
 
 all_courses <- bind_rows(coursera_df, udemy_df, edx_df, future_df)
@@ -116,9 +110,7 @@ all_courses <- all_courses %>%
   filter(CourseTitle != "") %>%
   distinct(CourseTitle, Platform, .keep_all = TRUE)
 
-# =========================================================
-# 6️⃣  SAVE TO CSV
-# =========================================================
+#  SAVE TO CSV
 cat("Saving file to Data/Course_Info.csv...\n")
 
 write.csv(all_courses, "../Data/Course_Info.csv", row.names = FALSE)
