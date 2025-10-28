@@ -1,22 +1,22 @@
-# ⚡ CODEALPHA TOOL OVERLOAD ANALYTICS  
+# EV Infrastructure vs. Adoption: A Data-Driven Exploration
 Exploring how the accessibility of EV charging stations influences the adoption of electric vehicles.  
 Data from the **U.S. DOE Alternative Fuels Data Center** and the **Electric Vehicle Population dataset**, analyzed using **Excel, SQL, R, and Tableau**.
 
 ---
 
-## 📘 Project Overview
+## Project Overview
 This project is part of the **CodeAlpha Data Analytics Internship**.  
 It focuses on understanding how the availability of EV (Electric Vehicle) charging stations impacts EV adoption rates across regions.  
 The analysis uses a structured, data-driven workflow — covering **data profiling**, **cleaning**, **logging**, and later **exploratory data analysis (EDA)** and **SQL joins**.
 
 ---
 
-## 🎯 Objective
+## Objective
 To explore the relationship between EV adoption and the accessibility of charging stations, and to evaluate whether regions with better charging infrastructure have higher EV penetration.
 
 ---
 
-## 📊 Data Sources
+## Data Sources
 1. **Electric Vehicle Population Data** — from U.S. government open data repositories.  
 2. **Alternative Fuel Stations Data** — from the U.S. Department of Energy’s Alternative Fuels Data Center (AFDC).
 
@@ -68,7 +68,7 @@ To explore the relationship between EV adoption and the accessibility of chargin
 
 ---
 
-## 🧠 Scripts and Workflow
+## Scripts and Workflow
 1. **[1_Data_Profiling.R](Scripts/1_Data_Profiling.R)** — Profiles both datasets, checks data types, and detects anomalies.  
 2. **[2_EV_Data_Cleaning.R](Scripts/2_EV_Data_Cleaning.R)** — Cleans and logs the Electric Vehicle dataset.  
 3. **[3_Alt_Data_Cleaning_With_Log.R](Scripts/3_Alt_Data_Cleaning_With_Log.R)** — Cleans and logs the Alternative Fuel Stations dataset.
@@ -86,7 +86,7 @@ Before proceeding to visualization and SQL joins, the next step is to:
 
 ---
 
-## 🧰 Tools Used
+## Tools Used
 - **R** for data cleaning, profiling, and transformation.  
 - **SQL (MySQL)** for joining datasets and querying insights.  
 - **Excel** for validation and quick exploration.  
@@ -94,9 +94,9 @@ Before proceeding to visualization and SQL joins, the next step is to:
 
 ---
 
-## 📦 Download the Project
+## Download the Project
 Download the full repository as a ZIP file:  
-👉 [Download Full Project (ZIP)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/archive/refs/heads/main.zip)
+ [Download Full Project (ZIP)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/archive/refs/heads/main.zip)
 
 ---
 
@@ -110,7 +110,7 @@ A short walkthrough video (to be posted on LinkedIn) will explain:
 
 ---
 
-## 🪪 Internship Details
+## Internship Details
 This project fulfills **Task 1: Web Scraping / Data Cleaning** of the CodeAlpha Data Analytics Internship.  
 The next phase covers **Task 2: Exploratory Data Analysis (EDA)**, using the cleaned datasets above.
 
