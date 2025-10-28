@@ -1,5 +1,3 @@
-# ===============================================================
-# SCRIPT: Data_Profiling.R
 # PURPOSE: Automated profiling and quality documentation
 
 install.packages(c("DataExplorer", "skimr", "summarytools"))
