@@ -1,0 +1,10 @@
+Column,Issue,Action,DataQuality_Dimension,Validation,Final_DataType
+All Columns,Inconsistent data types,"Standardized numeric, text, and datetime types","Consistency, Validity",Verified with str(),Mixed (see column summary)
+All Columns,Inconsistent data types,"Standardized numeric, text, and datetime types","Consistency, Validity",Verified with str(),Mixed (see column summary)
+Access_Days_Time,252 blanks,Replaced blanks with 'Unknown',Completeness,Checked NA count,VARCHAR(255)
+EV_Level1_EVSE_Num / EV_Level2_EVSE_Num / EV_DC_Fast_Count,Missing values for electric stations,Replaced NA with 0 if Fuel_Type_Code = 'ELEC',Completeness,Value count verified,INT
+Owner_Type_Code,"Abbreviations (FG, LG, SG, P, T)",Mapped to full names,"Accuracy, Readability",Unique value check,VARCHAR(50)
+Latitude / Longitude,Precision mismatch,Rounded to 6 decimals,Consistency,Range check (-90 to 90 / -180 to 180),"DECIMAL(10,6)"
+Date_Last_Confirmed / Updated_At / Open_Date,Non-SQL formats or UTC suffix,Parsed to 'YYYY-MM-DD HH:MM:SS' datetime,Validity,Format check,DATETIME
+ID,0 duplicates found,Will review duplicates manually,Uniqueness,n_distinct(ID),VARCHAR(255)
+Latitude / Longitude,0 invalid coordinates found,Filtered or corrected manually,Accuracy,Coordinate validation,"DECIMAL(10,6)"
