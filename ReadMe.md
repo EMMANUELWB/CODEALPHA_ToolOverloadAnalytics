@@ -33,10 +33,22 @@ To explore the relationship between EV adoption and the accessibility of chargin
 | `Presentation/` | Final presentation assets and visuals         |
 
 
-
 ---
 
 ## Data Cleaning and Profiling Summary
+## Data Quality Dimensions Ensured
+
+Both datasets were assessed and cleaned according to seven key data quality dimensions to ensure analytical reliability and transparency:
+| Dimension        | Description                                                                  | Example in This Project                                                      |
+| ---------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| **Accuracy**     | Verified data values against official sources and corrected inconsistencies. | Checked vehicle manufacturers and model names for valid categories.          |
+| **Completeness** | Addressed missing fields and ensured key identifiers existed.                | Filled or flagged null entries for `City`, `State`, and `FuelTypeCode`.      |
+| **Consistency**  | Standardized naming conventions and data formats.                            | Used consistent `State` abbreviations and unified units for `ElectricRange`. |
+| **Timeliness**   | Used the most recent and relevant dataset versions.                          | Incorporated AFDC and EV population data from 2024.                          |
+| **Validity**     | Ensured each value met defined data type and domain rules.                   | Confirmed latitude/longitude values were within valid coordinate ranges.     |
+| **Uniqueness**   | Removed duplicates across both datasets.                                     | Ensured unique `VIN` (vehicles) and `StationID` (charging stations).         |
+| **Integrity**    | Maintained logical and relational consistency.                               | Preserved links between `Make`, `ModelYear`, and associated records.         |
+
 
 ### Electric Vehicle (EV) Dataset
 - Handled missing values and standardized column names.  
