@@ -32,13 +32,41 @@ To explore the relationship between EV adoption and the accessibility of chargin
 | `Dashboard/`    | Tableau visualizations and exported files     |
 | `Presentation/` | Final presentation assets and visuals         |
 
-
 ---
 
 ## Data Cleaning and Profiling Summary
+
+### Data Profiling Overview
+Before cleaning, both datasets underwent a **comprehensive profiling process** using R.  
+This step helped identify data types, missing values, outliers, and distribution patterns to guide subsequent transformations.  
+
+**Profiling Steps Included:**
+- Detection of invalid or inconsistent records (e.g., missing coordinates or blank city names).  
+- Summary statistics for numeric variables (`ElectricRange`, `BaseMSRP`, etc.).  
+- Frequency analysis of categorical fields like `Make`, `ModelYear`, and `FuelTypeCode`.  
+- Validation of relationships between geographic and vehicle data.  
+
+Profiling ensured the datasets met all seven **data quality dimensions** — *accuracy, completeness, consistency, timeliness, validity, uniqueness, and integrity* — before cleaning began.
+
+---
+
+### Profiling Script and Reports
+
+**Script Used**  
+- [Data Profiling Script (R)](Scripts/1_Data_Profiling.R)
+
+**Downloadable Profiling Reports**  
+- [EV Profiling Report (HTML)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Downloadable_Files/EV_Profile.html)  
+- [ALT Profiling Report (HTML)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Downloadable_Files/ALT_Profile.html)
+
+Both reports can be downloaded directly and opened in any browser for interactive exploration.
+
+---
+
 ## Data Quality Dimensions Ensured
 
 Both datasets were assessed and cleaned according to seven key data quality dimensions to ensure analytical reliability and transparency:
+
 | Dimension        | Description                                                                  | Example in This Project                                                      |
 | ---------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
 | **Accuracy**     | Verified data values against official sources and corrected inconsistencies. | Checked vehicle manufacturers and model names for valid categories.          |
@@ -49,6 +77,7 @@ Both datasets were assessed and cleaned according to seven key data quality dime
 | **Uniqueness**   | Removed duplicates across both datasets.                                     | Ensured unique `VIN` (vehicles) and `StationID` (charging stations).         |
 | **Integrity**    | Maintained logical and relational consistency.                               | Preserved links between `Make`, `ModelYear`, and associated records.         |
 
+---
 
 ### Electric Vehicle (EV) Dataset
 - Handled missing values and standardized column names.  
@@ -61,7 +90,7 @@ Both datasets were assessed and cleaned according to seven key data quality dime
 - [EV Raw Data](Data/1_Electric_Vehicle_Population_Data.csv)  
 - [EV Cleaned Data](Data/2_Electric_Vehicle_Population_Clean.csv)  
 - [EV Cleaning Log](Data/3_EV_Data_Cleaning_Log.csv)  
-- [EV Profiling Report](Reports/EV_Profile.xlsx)
+- [EV Profiling Report (Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Downloadable_Files/EV_Profile.html)
 
 ---
 
@@ -76,7 +105,7 @@ Both datasets were assessed and cleaned according to seven key data quality dime
 - [Alt Fuel Raw Data](Data/4_Alternative_Fuel_Stations.csv)  
 - [Alt Fuel Cleaned Data](Data/5_Alternative_Fuel_Stations_Clean.csv)  
 - [Alt Fuel Cleaning Log](Data/6_Alt_Data_Cleaning_Log.csv)  
-- [Alt Fuel Profiling Report](Reports/ALT_Profile.xlsx)
+- [Alt Profiling Report (Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Downloadable_Files/ALT_Profile.html)
 
 ---
 
