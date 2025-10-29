@@ -55,11 +55,14 @@ Profiling ensured the datasets met all seven **data quality dimensions** — *ac
 **Script Used**  
 - [Data Profiling Script (R)](Scripts/1_Data_Profiling.R)
 
-**Profiling Reports**  
-https://emmanuelwb.github.io/CODEALPHA_ToolOverloadAnalytics/Reports/EV_Profile.html
-https://emmanuelwb.github.io/CODEALPHA_ToolOverloadAnalytics/Reports/ALT_Profile.html
+## View Online Reports
 
-Both reports can be  opened in any browser for interactive exploration.
+You can now explore the interactive profiling summaries directly through **GitHub Pages**:
+
+- [View EV Profiling Report Online](https://emmanuelwb.github.io/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/Reports/EV_Profile.html)
+- [View ALT Profiling Report Online](https://emmanuelwb.github.io/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/Reports/ALT_Profile.html)
+
+*(If the page doesn’t load instantly, wait a minute — GitHub Pages may still be caching your deployment.)*
 
 ---
 
