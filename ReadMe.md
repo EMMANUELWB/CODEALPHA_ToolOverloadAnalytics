@@ -87,11 +87,10 @@ Both datasets were assessed and cleaned according to seven key data quality dime
 
 **View Files**  
 - [EV Data Cleaning Script (R)](Scripts/2_EV_Data_Cleaning.R)  
-- [EV Raw Data](Data/1_Electric_Vehicle_Population_Data.csv)  
-- [EV Cleaned Data](Data/2_Electric_Vehicle_Population_Clean.csv)  
-- [EV Cleaning Log](Data/3_EV_Data_Cleaning_Log.csv)  
-- [EV Profiling Report (Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Downloadable_Files/EV_Profile.html)
-
+- [EV Raw Data (Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/1_Electric_Vehicle_Population_Data.csv)
+- [EV Cleaned Data (Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/2_Electric_Vehicle_Population_Clean.csv) 
+- [EV Cleaning Log (Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/3_EV_Data_Cleaning_Log.csv)  
+- [EV Profiling Report (HTML Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Reports/EV_Profile.html)
 ---
 
 ### Alternative Fuel Stations Dataset
@@ -102,10 +101,10 @@ Both datasets were assessed and cleaned according to seven key data quality dime
 
 **View Files**  
 - [Alt Fuel Data Cleaning Script (R)](Scripts/3_Alt_Data_Cleaning_With_Log.R)  
-- [Alt Fuel Raw Data](Data/4_Alternative_Fuel_Stations.csv)  
-- [Alt Fuel Cleaned Data](Data/5_Alternative_Fuel_Stations_Clean.csv)  
-- [Alt Fuel Cleaning Log](Data/6_Alt_Data_Cleaning_Log.csv)  
-- [Alt Profiling Report (Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Downloadable_Files/ALT_Profile.html)
+- [Alt Fuel Raw Data (Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/4_Alternative_Fuel_Stations.csv)
+- [Alt Fuel Cleaned Data (Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/5_Alternative_Fuel_Stations_Clean.csv)
+- [Alt Fuel Cleaning Log (Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/6_Alt_Data_Cleaning_Log.csv) 
+- [ALT Profiling Report (HTML Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Reports/ALT_Profile.html)
 
 ---
 
