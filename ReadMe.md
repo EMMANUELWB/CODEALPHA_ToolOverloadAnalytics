@@ -56,9 +56,8 @@ Profiling ensured the datasets met all seven **data quality dimensions** — *ac
 - [Data Profiling Script (R)](Scripts/1_Data_Profiling.R)
 
 **Profiling Reports**  
-- [View EV Profiling Report Online](https://emmanuelwb.github.io/CODEALPHA_ToolOverloadAnalytics/Reports_HTML/EV_Profile.html)
-- [View ALT Profiling Report Online](https://emmanuelwb.github.io/CODEALPHA_ToolOverloadAnalytics/Reports_HTML/ALT_Profile.html)
-
+- [EV Profiling Report (HTML Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Reports/EV_Profile.html)
+- [ALT Profiling Report (HTML Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Reports/ALT_Profile.html)
 Both reports can be downloaded directly and opened in any browser for interactive exploration.
 
 ---
