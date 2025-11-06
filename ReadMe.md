@@ -89,13 +89,24 @@ Both datasets were assessed and cleaned according to seven key data quality dime
 **View Files**  
 - [EV Data Cleaning Script (R)](Scripts/2_EV_Data_Cleaning.R)  
 - [EV Raw Data (View on Google Sheet)](https://docs.google.com/spreadsheets/d/15xLDvIV2umCENDPPz9xq2_-1HC8duAfIflqRc0Scdf8/edit?usp=sharing)  
-- [EV Raw Data (View)](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/raw/main/Data/1_Electric_Vehicle_Population_Data.csv)
+- [EV Raw Data (View)](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/raw/main/Data/1_Electric_Vehicle_Population_Data.csv)  
 
 - [EV Cleaned Data (View on Google Sheet)](https://docs.google.com/spreadsheets/d/1bwQfKh6nN8H2uhL8yTBAc7N9ehSsqUqA-jrKhZ_N8Ug/edit?usp=sharing)  
-- [EV Cleaned Data (View)](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/raw/main/Data/2_Electric_Vehicle_Population_Clean.csv)
+- [EV Cleaned Data (View)](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/raw/main/Data/2_Electric_Vehicle_Population_Clean.csv)  
 
 - [EV Cleaning Log (View)](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/blob/main/Data/3_EV_Data_Cleaning_Log.csv)  
-- [EV Profiling Report (HTML Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Reports/EV_Profile.html)
+- [EV Profiling Report (HTML Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Reports/EV_Profile.html)  
+
+- [EV Adoption by Year (View CSV)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/EV_Adoption_By_Year.csv)  
+- [EV Average Range by Year (View CSV)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/Average_Range_By_Year.csv)  
+- [EV Price vs Range Data (View CSV)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/Price%20vs%20range%20query.csv)  
+- [Top Manufacturers by Year (View CSV)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/Top%20manufacturers%20by%20year.csv)  
+- [Top 10 Counties (View CSV)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/Top_10_Counties.csv)  
+- [County Growth Index (View CSV)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/County%20growth%20index.csv)  
+- [CAFV Eligibility Distribution (View CSV)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/CAFV_Eligibility_Distribution.csv)  
+- [EV Distribution Map Data (View CSV)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/EV_Distribution_Map.csv)  
+- [EV Average Range by Make (View CSV)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/Average_Range_By_Make.csv)
+
 ---
 
 
