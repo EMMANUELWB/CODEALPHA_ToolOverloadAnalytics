@@ -1,17 +1,11 @@
-# Explicitly mark languages
-Scripts/*.sql linguist-language=SQL
+# Explicitly mark code languages
+*.sql linguist-language=SQL
 *.R linguist-language=R
 *.r linguist-language=R
 *.html linguist-language=HTML
 
-# Vendored folders (ignored in language stats)
-# Keep non-code folders ignored
+# Ignore large data, reports, images, dashboards, presentations from language stats
 /Data/** linguist-vendored
-/Presentation/** linguist-vendored
+/Reports/** linguist-vendored
 /Dashboard/** linguist-vendored
-
-# Reports folder: count scripts and HTML, ignore images
-/Reports/** linguist-vendored=false
-/Reports/**/*.png linguist-vendored
-/Reports/**/*.jpg linguist-vendored
-/Reports/**/*.jpeg linguist-vendored
+/Presentation/** linguist-vendored
