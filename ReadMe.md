@@ -103,6 +103,15 @@ Both datasets were assessed and cleaned according to seven key data quality dime
 1. **[1_Data_Profiling.R](Scripts/1_Data_Profiling.R)** — Profiles both datasets, checks data types, and detects anomalies.  
 2. **[2_EV_Data_Cleaning.R](Scripts/2_EV_Data_Cleaning.R)** — Cleans and logs the Electric Vehicle dataset.  
 
+
+## Scripts and Workflow
+1. **[1_Data_Profiling.R](Scripts/1_Data_Profiling.R)** — Profiles both datasets, checks data types, and detects anomalies.  
+2. **[2_EV_Data_Cleaning.R](Scripts/2_EV_Data_Cleaning.R)** — Cleans and logs the Electric Vehicle dataset.  
+3. **[Hypothesis1_EV_Adoption_Trend..R](Scripts/Hypothesis1_EV_Adoption_Trend..R)** — Analyzes EV adoption trends over time, generates regression plot with correlation and equation.  
+4. **[Hypothesis 2 – EV Range Over Time.R](Scripts/Hypothesis%202%20%E2%80%93%20EV%20Range%20Over%20Time.R)** — Examines how average EV range has evolved by model year, with regression analysis.  
+5. **[Hypothesis 3 – Price vs Range.R](Scripts/Hypothesis%203%20%E2%80%93%20Price%20vs%20Range.R)** — Investigates the relationship between vehicle price and range using regression and correlation.  
+6. **[ev-script.sql](Scripts/ev-script.sql)** — Contains SQL queries for summarizing, joining, and analyzing EV datasets.
+
 ---
 
 ## 🧾 Next Steps — Exploratory Data Analysis (EDA)
