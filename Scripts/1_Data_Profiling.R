@@ -23,7 +23,7 @@ skim(ev)
 create_report(ev, output_file = "Reports/EV_Profile.html", output_dir = "Reports")
 
 
-# 5. Data quality summaries
+# Data quality summaries
 dir.create("Reports", showWarnings = FALSE)
 dfSummary(ev, file = "Reports/EV_Summary.html")
 
