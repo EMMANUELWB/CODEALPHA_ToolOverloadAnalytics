@@ -19,6 +19,21 @@ To explore the relationship between EV adoption and the accessibility of chargin
 ## Data Sources
 **Electric Vehicle Population Data** — from U.S. government open data repositories.  
 
+---
+
+## Business Questions Explored
+The analysis aimed to answer the following SQL-driven business questions:
+
+1. Which states or counties have the highest EV adoption rates, and how does this correlate with the number of charging stations?  
+2. How does charger density (number of chargers per 1,000 EVs) vary across regions?  
+3. Is there a relationship between EV model year and average electric range over time?  
+4. How do average EV prices correlate with their electric range across different models and years?  
+5. Which manufacturers dominate EV sales in specific years or regions?  
+6. How is EV adoption distributed among counties with different income levels or population growth indices?  
+7. What is the trend of total EV adoption year over year, and does it follow an accelerating pattern?  
+8. Are there clusters of regions with high EV adoption but low charging infrastructure, indicating potential market gaps?  
+9. How do public fast charger counts relate to EV adoption in urban vs. rural areas?  
+10. Which top counties contribute most to overall EV adoption, and how do they compare to national trends?
 
 ---
 
@@ -60,7 +75,6 @@ Profiling ensured the datasets met all seven **data quality dimensions** — *ac
 You can explore the interactive profiling summaries directly through **GitHub Pages**:
 
 - [View EV Profiling Report Online](https://emmanuelwb.github.io/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/Reports/EV_Profile.html)
-
 
 ---
 
@@ -109,8 +123,6 @@ Both datasets were assessed and cleaned according to seven key data quality dime
 
 ---
 
-
-
 ## Scripts and Workflow
 1. **[1_Data_Profiling.R](Scripts/1_Data_Profiling.R)** — Profiles both datasets, checks data types, and detects anomalies.  
 2. **[2_EV_Data_Cleaning.R](Scripts/2_EV_Data_Cleaning.R)** — Cleans and logs the Electric Vehicle dataset.  
@@ -118,17 +130,6 @@ Both datasets were assessed and cleaned according to seven key data quality dime
 4. **[Hypothesis 2 – EV Range Over Time.R](Scripts/Hypothesis%202%20%E2%80%93%20EV%20Range%20Over%20Time.R)** — Examines how average EV range has evolved by model year, with regression analysis.  
 5. **[Hypothesis 3 – Price vs Range.R](Scripts/Hypothesis%203%20%E2%80%93%20Price%20vs%20Range.R)** — Investigates the relationship between vehicle price and range using regression and correlation.  
 6. **[ev-script.sql](Scripts/ev-script.sql)** — Contains SQL queries for summarizing, and analyzing EV datasets.
-
----
-
-## 🧾 Next Steps — Exploratory Data Analysis (EDA)
-Before proceeding to visualization and SQL joins, the next step is to:
-- Ask meaningful questions such as:  
-  *How does charger density relate to EV count per state or city?*  
-  *Do regions with more public fast chargers show higher EV adoption?*  
-- Explore the data structure, variables, and distributions using R and SQL.  
-- Perform joins between the **EV** and **Alternative Fuel** datasets on location identifiers (state, city, ZIP).  
-- Visualize findings using Tableau dashboards.
 
 ---
 
@@ -140,26 +141,3 @@ Before proceeding to visualization and SQL joins, the next step is to:
 
 ---
 
-## Download the Project
-Download the full repository as a ZIP file:  
- [Download Full Project (ZIP)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/archive/refs/heads/main.zip)
-
----
-
-## Project Video
-A short walkthrough video (to be posted on LinkedIn) will explain:
-- Project overview and goals  
-- Data sources and cleaning steps  
-- Tools and workflow  
-- Insights from profiling  
-- Next steps (EDA and joins)
-
----
-
-## Internship Details
-This project fulfills **Task 1: Web Scraping / Data Cleaning** of the CodeAlpha Data Analytics Internship.  
-The next phase covers **Task 2: Exploratory Data Analysis (EDA)**, using the cleaned datasets above.
-
----
-
-© 2025 CodeAlpha Data Analytics Internship
