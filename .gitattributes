@@ -4,13 +4,14 @@
 *.r linguist-language=R
 *.html linguist-language=HTML
 
-# Mark non-code directories as vendored to exclude from language stats
+# Vendored folders (ignored in language stats)
+# Keep non-code folders ignored
 /Data/** linguist-vendored
-/Reports/** linguist-vendored
-/Dashboard/** linguist-vendored
 /Presentation/** linguist-vendored
+/Dashboard/** linguist-vendored
 
-# Optional: ignore other generated or auxiliary files
-/*.csv linguist-vendored
-/*.zip linguist-vendored
-/*.txt linguist-vendored
+# Reports folder: count scripts and HTML, ignore images
+/Reports/** linguist-vendored=false
+/Reports/**/*.png linguist-vendored
+/Reports/**/*.jpg linguist-vendored
+/Reports/**/*.jpeg linguist-vendored
