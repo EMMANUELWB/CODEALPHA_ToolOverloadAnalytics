@@ -1,5 +1,5 @@
 -- EV SQL Analysis Script
--- Containswill queries for analyzing EV adoption, charger density,
+-- will Contains queries for analyzing EV adoption, charger density,
 -- average range by model year, price vs range correlations,
 -- and top manufacturers per year.
 
