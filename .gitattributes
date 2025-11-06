@@ -1,10 +1,10 @@
-# Explicitly mark code languages
+# Force GitHub to recognize SQL, R, and HTML explicitly
 *.sql linguist-language=SQL
 *.R linguist-language=R
 *.r linguist-language=R
 *.html linguist-language=HTML
 
-# Ignore large data, reports, images, dashboards, presentations from language stats
+# Ignore large non-code folders from language stats
 /Data/** linguist-vendored
 /Reports/** linguist-vendored
 /Dashboard/** linguist-vendored
