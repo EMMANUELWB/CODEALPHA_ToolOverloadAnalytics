@@ -1,16 +1,16 @@
-# Force GitHub to recognize SQL files as SQL
+# Explicitly mark languages
 *.sql linguist-language=SQL
-
-# Force GitHub to recognize R scripts as R
 *.R linguist-language=R
 *.r linguist-language=R
-
-# Force HTML files as HTML
 *.html linguist-language=HTML
 
-# Optional: ignore docs, images, and other non-code for language stats
+# Mark non-code directories as vendored to exclude from language stats
 /Data/** linguist-vendored
 /Reports/** linguist-vendored
 /Dashboard/** linguist-vendored
 /Presentation/** linguist-vendored
 
+# Optional: ignore other generated or auxiliary files
+/*.csv linguist-vendored
+/*.zip linguist-vendored
+/*.txt linguist-vendored
