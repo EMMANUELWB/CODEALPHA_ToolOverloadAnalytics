@@ -1,8 +1,3 @@
-/* GitHub language detection override
-   This is a placeholder to ensure this file is recognized as SQL
-*/
-
-
 -- EV SQL Analysis Script
 -- will Contains queries for analyzing EV adoption, charger density,
 -- average range by model year, price vs range correlations,
