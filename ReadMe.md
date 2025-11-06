@@ -159,4 +159,8 @@ The following figures illustrate key insights from the EV analyses conducted usi
 - **Tableau** for visualization and storytelling.  
 
 ---
+## Languages Used
+- R
+- SQL
+---
 
