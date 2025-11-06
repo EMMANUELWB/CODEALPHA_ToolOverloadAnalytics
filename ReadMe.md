@@ -1,6 +1,6 @@
 # EV Infrastructure vs. Adoption: A Data-Driven Exploration
 Exploring how the accessibility of EV charging stations influences the adoption of electric vehicles.  
-Data from the **U.S. DOE Alternative Fuels Data Center** and the **Electric Vehicle Population dataset**, analyzed using **Excel, SQL, R, and Tableau**.
+Data from the **Electric Vehicle Population dataset**, analyzed using **Excel, SQL, R, and Tableau**.
 
 ---
 
@@ -17,8 +17,8 @@ To explore the relationship between EV adoption and the accessibility of chargin
 ---
 
 ## Data Sources
-1. **Electric Vehicle Population Data** — from U.S. government open data repositories.  
-2. **Alternative Fuel Stations Data** — from the U.S. Department of Energy’s Alternative Fuels Data Center (AFDC).
+**Electric Vehicle Population Data** — from U.S. government open data repositories.  
+
 
 ---
 
@@ -57,12 +57,10 @@ Profiling ensured the datasets met all seven **data quality dimensions** — *ac
 
 ## View Online Reports
 
-You can now explore the interactive profiling summaries directly through **GitHub Pages**:
+You can explore the interactive profiling summaries directly through **GitHub Pages**:
 
 - [View EV Profiling Report Online](https://emmanuelwb.github.io/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/Reports/EV_Profile.html)
-- [View ALT Profiling Report Online](https://emmanuelwb.github.io/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/Reports/ALT_Profile.html)
 
-*(If the page doesn’t load instantly, wait a minute — GitHub Pages may still be caching your deployment.)*
 
 ---
 
@@ -75,7 +73,7 @@ Both datasets were assessed and cleaned according to seven key data quality dime
 | **Accuracy**     | Verified data values against official sources and corrected inconsistencies. | Checked vehicle manufacturers and model names for valid categories.          |
 | **Completeness** | Addressed missing fields and ensured key identifiers existed.                | Filled or flagged null entries for `City`, `State`, and `FuelTypeCode`.      |
 | **Consistency**  | Standardized naming conventions and data formats.                            | Used consistent `State` abbreviations and unified units for `ElectricRange`. |
-| **Timeliness**   | Used the most recent and relevant dataset versions.                          | Incorporated AFDC and EV population data from 2024.                          |
+| **Timeliness**   | Used the most recent and relevant dataset versions.                          | Incorporated EV population data from 2024.                          |
 | **Validity**     | Ensured each value met defined data type and domain rules.                   | Confirmed latitude/longitude values were within valid coordinate ranges.     |
 | **Uniqueness**   | Removed duplicates across both datasets.                                     | Ensured unique `VIN` (vehicles) and `StationID` (charging stations).         |
 | **Integrity**    | Maintained logical and relational consistency.                               | Preserved links between `Make`, `ModelYear`, and associated records.         |
@@ -90,31 +88,20 @@ Both datasets were assessed and cleaned according to seven key data quality dime
 
 **View Files**  
 - [EV Data Cleaning Script (R)](Scripts/2_EV_Data_Cleaning.R)  
-- [EV Raw Data (Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/1_Electric_Vehicle_Population_Data.csv)
-- [EV Cleaned Data (Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/2_Electric_Vehicle_Population_Clean.csv) 
-- [EV Cleaning Log (Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/3_EV_Data_Cleaning_Log.csv)  
+- [EV Raw Data (View on Google Sheet)](https://docs.google.com/spreadsheets/d/15xLDvIV2umCENDPPz9xq2_-1HC8duAfIflqRc0Scdf8/edit?usp=sharing)  
+- [EV Raw Data (View)](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/raw/main/Data/1_Electric_Vehicle_Population_Data.csv)
+
+- [EV Cleaned Data (View on Google Sheet)](https://docs.google.com/spreadsheets/d/1bwQfKh6nN8H2uhL8yTBAc7N9ehSsqUqA-jrKhZ_N8Ug/edit?usp=sharing)  
+- [EV Cleaned Data (View)](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/raw/main/Data/2_Electric_Vehicle_Population_Clean.csv)
+
+- [EV Cleaning Log (View)](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/blob/main/Data/3_EV_Data_Cleaning_Log.csv)  
 - [EV Profiling Report (HTML Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Reports/EV_Profile.html)
 ---
 
-### Alternative Fuel Stations Dataset
-- Cleaned station records, standardized addresses, and handled missing “Intersection Directions.”  
-- Converted blank cells to `NULL` for SQL compatibility.  
-- Verified latitude/longitude formats for geospatial joins.  
-- Created a data cleaning log similar to the EV process.
-
-**View Files**  
-- [Alt Fuel Data Cleaning Script (R)](Scripts/3_Alt_Data_Cleaning_With_Log.R)  
-- [Alt Fuel Raw Data (Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/4_Alternative_Fuel_Stations.csv)
-- [Alt Fuel Cleaned Data (Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/5_Alternative_Fuel_Stations_Clean.csv)
-- [Alt Fuel Cleaning Log (Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/6_Alt_Data_Cleaning_Log.csv) 
-- [ALT Profiling Report (HTML Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Reports/ALT_Profile.html)
-
----
 
 ## Scripts and Workflow
 1. **[1_Data_Profiling.R](Scripts/1_Data_Profiling.R)** — Profiles both datasets, checks data types, and detects anomalies.  
 2. **[2_EV_Data_Cleaning.R](Scripts/2_EV_Data_Cleaning.R)** — Cleans and logs the Electric Vehicle dataset.  
-3. **[3_Alt_Data_Cleaning_With_Log.R](Scripts/3_Alt_Data_Cleaning_With_Log.R)** — Cleans and logs the Alternative Fuel Stations dataset.
 
 ---
 
@@ -131,7 +118,7 @@ Before proceeding to visualization and SQL joins, the next step is to:
 
 ## Tools Used
 - **R** for data cleaning, profiling, and transformation.  
-- **SQL (MySQL)** for joining datasets and querying insights.  
+- **SQL (MySQL)** for querying insights.  
 - **Excel** for validation and quick exploration.  
 - **Tableau** for visualization and storytelling.  
 
