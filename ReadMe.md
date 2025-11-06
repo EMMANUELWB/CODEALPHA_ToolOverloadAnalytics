@@ -133,6 +133,25 @@ Both datasets were assessed and cleaned according to seven key data quality dime
 
 ---
 
+## Output
+### Hypothesis Analysis Figures
+
+The following figures illustrate key insights from the EV analyses conducted using R and SQL:
+
+1. **EV Adoption Trend with Regression**  
+   Shows the trend of total EV adoption over time, including regression line and correlation metrics.  
+   ![EV Adoption Trend](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/blob/main/Reports/EV_Adoption_Trend_with_Regression.png)
+
+2. **EV Range Trend Over Years**  
+   Examines how the average electric range has evolved by model year.  
+   ![EV Range Trend](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/blob/main/Reports/EV_Range_Trend_with_Regression.png)
+
+3. **EV Price vs Range Analysis**  
+   Investigates the relationship between vehicle price and range using regression and correlation.  
+   ![EV Price vs Range](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/blob/main/Reports/EV_Price_vs_Range_with_Regression.png)
+
+---
+
 ## Tools Used
 - **R** for data cleaning, profiling, and transformation.  
 - **SQL (MySQL)** for querying insights.  
