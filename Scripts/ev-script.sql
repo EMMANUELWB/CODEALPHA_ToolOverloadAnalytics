@@ -1,3 +1,8 @@
+-- SQL Analysis Scripts for EV Project
+-- Contains queries for summarizing EV adoption, charger density, and model trends.
+-- Each query annotated with purpose for clarity.
+
+
 CREATE DATABASE ev_analysis;
 
 USE ev_analysis;
