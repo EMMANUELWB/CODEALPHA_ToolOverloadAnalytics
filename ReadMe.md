@@ -5,15 +5,16 @@ Data from the **Electric Vehicle Population dataset**, analyzed using **Excel, S
 ---
 
 ## Project Overview
-This project is part of the **CodeAlpha Data Analytics Internship**.  
-It focuses on understanding how the availability of EV (Electric Vehicle) charging stations impacts EV adoption rates across regions.  
-The analysis uses a structured, data-driven workflow — covering **data profiling**, **cleaning**, **logging**, and later **exploratory data analysis (EDA)** and **SQL joins**.
 
+This project is part of the CodeAlpha Data Analytics Internship.
+It focuses on uncovering insights from the Electric Vehicle (EV) Population dataset to understand adoption patterns, growth trends, and key performance indicators across the United States.
+
+The analysis follows a structured, data-driven workflow from data profiling and cleaning to exploratory data analysis (EDA) and SQL-driven insights.
 ---
 
 ## Objective
-To explore the relationship between EV adoption and the accessibility of charging stations, and to evaluate whether regions with better charging infrastructure have higher EV penetration.
-
+To analyze key patterns and trends in electric vehicle (EV) adoption using data-driven insights from the EV Population dataset.
+The study focuses on how EV adoption has evolved over time, which manufacturers and regions lead the market, and how electric range and price vary across models and years.
 ---
 
 ## Data Sources
@@ -22,18 +23,13 @@ To explore the relationship between EV adoption and the accessibility of chargin
 ---
 
 ## Business Questions Explored
-The analysis aimed to answer the following SQL-driven business questions:
+The analysis was designed to answer the following data-driven business questions using R, SQL, and Excel:
 
-1. Which states or counties have the highest EV adoption rates, and how does this correlate with the number of charging stations?  
-2. How does charger density (number of chargers per 1,000 EVs) vary across regions?  
-3. Is there a relationship between EV model year and average electric range over time?  
-4. How do average EV prices correlate with their electric range across different models and years?  
-5. Which manufacturers dominate EV sales in specific years or regions?  
-6. How is EV adoption distributed among counties with different income levels or population growth indices?  
-7. What is the trend of total EV adoption year over year, and does it follow an accelerating pattern?  
-8. Are there clusters of regions with high EV adoption but low charging infrastructure, indicating potential market gaps?  
-9. How do public fast charger counts relate to EV adoption in urban vs. rural areas?  
-10. Which top counties contribute most to overall EV adoption, and how do they compare to national trends?
+1. EV Adoption Trends: How has the total number of registered EVs changed over the years, and is adoption accelerating?
+2. Range Evolution: What is the relationship between EV model year and the average electric range of vehicles?
+3. Price vs. Range Relationship: How do average EV prices correlate with their electric range across different models and years?
+4. Manufacturer Dominance: Which manufacturers consistently lead in EV sales across years and regions?  
+5. Regional Adoption Patterns: Which counties or regions contribute the most to overall EV adoption, and how do they compare to national trends? 
 
 ---
 
