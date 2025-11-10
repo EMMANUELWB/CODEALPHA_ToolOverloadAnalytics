@@ -1,8 +1,10 @@
--- EV SQL Analysis Script
--- will Contains queries for analyzing EV adoption, charger density,
--- average range by model year, price vs range correlations,
--- and top manufacturers per year.
-
+-- Purpose: aggregates and summarizes the Electric Vehicle Population dataset
+-- Contains: table creation, data load, and analysis queries for:
+--   - Adoption by year
+--   - Average range by year and by make
+--   - Price vs range analysis
+--   - Manufacturer counts by year
+--   - Regional (county/city) summaries and growth index
 
 
 -- Create a new database for EV analysis
@@ -62,6 +64,18 @@ DESCRIBE ev_data;
 -- Preview all records in the table
 SELECT * FROM ev_analysis.ev_data;
 
+
+--Core analysis queries (aligned to business questions)
+
+-- A. EV Adoption by Model Year (trend)
+SELECT 
+    Model_Year,
+    COUNT(`VIN_(1-10)`) AS Total_EV
+FROM ev_data
+WHERE Model_Year IS NOT NULL
+GROUP BY Model_Year
+ORDER BY Model_Year ASC;
+       
 -- Aggregate total EV count per model year, ordered by descending total, showing top 10
 SELECT 
     Model_Year,
