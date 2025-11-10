@@ -9,12 +9,13 @@ Data from the **Electric Vehicle Population dataset**, analyzed using **Excel, S
 This project is part of the CodeAlpha Data Analytics Internship.
 It focuses on uncovering insights from the Electric Vehicle (EV) Population dataset to understand adoption patterns, growth trends, and key performance indicators across the United States.
 
-The analysis follows a structured, data-driven workflow from data profiling and cleaning to exploratory data analysis (EDA) and SQL-driven insights.
+The analysis follows a structured, data-driven workflow from data profiling and cleaning to exploratory data analysis (EDA) and sql-driven insights.
 ---
 
-## Objective
+## Objective 
 To analyze key patterns and trends in electric vehicle (EV) adoption using data-driven insights from the EV Population dataset.
-The study focuses on how EV adoption has evolved over time, which manufacturers and regions lead the market, and how electric range and price vary across models and years.
+The study focuses on how EV adoption evolved over time, which manufacturers and regions lead the market, and how electric range and price vary across models and years.
+
 ---
 
 ## Data Sources
