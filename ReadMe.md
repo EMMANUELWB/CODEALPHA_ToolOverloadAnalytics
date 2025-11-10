@@ -146,16 +146,34 @@ The following figures illustrate key insights from the EV analyses conducted usi
 **Interpretation:**  
 The analysis shows a strong positive relationship between year and total EV adoption (R = 0.89), indicating that the number of EVs grows substantially over time. The P-value (< 0.001) confirms the trend is statistically significant.  
 
-On average, total EV adoption increases by approximately **2,203 vehicles per year**. The negative intercept is not practically meaningful; the key takeaway is the upward slope, highlighting consistent growth in EV adoption over the years.
+On average, total EV adoption increases by approximately **2,203 vehicles per year**. The key takeaway is the upward slope, highlighting consistent growth in EV adoption over the years.
   
    ![EV Adoption Trend](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/blob/main/Reports/EV_Adoption_Trend_with_Regression.png)
 
-2. **EV Range Trend Over Years**  
-   Examines how the average electric range has evolved by model year.  
+2. ### 2. EV Range Trend Over Years
+
+**Regression Equation:**  
+`Average Electric Range = 232.43 - 0.0606 × Year`  
+
+**R-value:** -0.01  
+**P-value:** 0.97  
+
+**Interpretation:**  
+The correlation between model year and average electric range is almost zero (R = -0.01) and not statistically significant (P = 0.97).  
+This shows that **there has been no meaningful change in average EV range over the years** in this dataset.
    ![EV Range Trend](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/blob/main/Reports/EV_Range_Trend_with_Regression.png)
 
-3. **EV Price vs Range Analysis**  
-   Investigates the relationship between vehicle price and range using regression and correlation.  
+3. ### 3. EV Price vs Range Analysis
+
+**Regression Equation:**  
+`Base MSRP = 0.0035 × Electric Range - 126.59`  
+
+**R-value:** 0.58  
+**P-value:** 0.00437  
+
+**Interpretation:**  
+There is a moderate positive correlation (R = 0.58) between EV price and range, statistically significant (P = 0.00437).  
+This suggests that **EVs with longer ranges tend to be more expensive**, though other factors likely also influence pricing.
    ![EV Price vs Range](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/blob/main/Reports/EV_Price_vs_Range_with_Regression.png)
 
 ---
