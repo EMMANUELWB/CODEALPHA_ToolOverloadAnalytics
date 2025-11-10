@@ -65,9 +65,9 @@ DESCRIBE ev_data;
 SELECT * FROM ev_analysis.ev_data;
 
 
---Core analysis queries (aligned to business questions)
+-- Core analysis queries (aligned to business questions)
 
--- A. EV Adoption by Model Year (trend)
+-- A. EV Adoption by Model Year (trend), ordered by ascending total, showing top 10
 SELECT 
     Model_Year,
     COUNT(`VIN_(1-10)`) AS Total_EV
