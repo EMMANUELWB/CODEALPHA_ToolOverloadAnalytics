@@ -135,8 +135,19 @@ Both datasets were assessed and cleaned according to seven key data quality dime
 
 The following figures illustrate key insights from the EV analyses conducted using R and SQL:
 
-1. **EV Adoption Trend with Regression**  
-   Shows the trend of total EV adoption over time, including regression line and correlation metrics.  
+1. ### EV Adoption Trend with Regression
+
+**Regression Equation:**  
+`Total EVs = -4,434,325.17 + 2,203.34 × Year`  
+
+**R-value:** 0.89  
+**P-value:** < 0.001  
+
+**Interpretation:**  
+The analysis shows a strong positive relationship between year and total EV adoption (R = 0.89), indicating that the number of EVs grows substantially over time. The P-value (< 0.001) confirms the trend is statistically significant.  
+
+On average, total EV adoption increases by approximately **2,203 vehicles per year**. The negative intercept is not practically meaningful; the key takeaway is the upward slope, highlighting consistent growth in EV adoption over the years.
+  
    ![EV Adoption Trend](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/blob/main/Reports/EV_Adoption_Trend_with_Regression.png)
 
 2. **EV Range Trend Over Years**  
