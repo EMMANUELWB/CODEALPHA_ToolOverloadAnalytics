@@ -181,3 +181,231 @@ FROM ev_data
 GROUP BY Model_Year, Make
 ORDER BY Model_Year, EV_Count DESC;
 
+USE ev_analysis;
+SET SQL_SAFE_UPDATES = 0;
+
+
+-- TESLA MODEL 3: BEV, correct range ~320 miles
+UPDATE ev_data
+  SET Electric_Range = 320
+WHERE Make = 'TESLA'
+  AND Model = 'MODEL 3'
+  AND Electric_Vehicle_Type = 'BEV'
+  AND Electric_Range = 0;
+
+-- TESLA MODEL S: BEV, correct range ~405 miles
+UPDATE ev_data
+  SET Electric_Range = 405
+WHERE Make = 'TESLA'
+  AND Model = 'MODEL S'
+  AND Electric_Vehicle_Type = 'BEV'
+  AND Electric_Range = 0;
+
+-- TESLA MODEL X: BEV, correct range ~340 miles
+UPDATE ev_data
+  SET Electric_Range = 340
+WHERE Make = 'TESLA'
+  AND Model = 'MODEL X'
+  AND Electric_Vehicle_Type = 'BEV'
+  AND Electric_Range = 0;
+
+-- TESLA MODEL Y: BEV, correct range ~310 miles
+UPDATE ev_data
+  SET Electric_Range = 310
+WHERE Make = 'TESLA'
+  AND Model = 'MODEL Y'
+  AND Electric_Vehicle_Type = 'BEV'
+  AND Electric_Range = 0;
+
+-- NISSAN LEAF: BEV, correct range ~150 miles
+UPDATE ev_data
+  SET Electric_Range = 150
+WHERE Make = 'NISSAN'
+  AND Model = 'LEAF'
+  AND Electric_Vehicle_Type = 'BEV'
+  AND Electric_Range = 0;
+
+-- CHEVROLET BOLT EV: BEV, correct range ~259 miles
+UPDATE ev_data
+  SET Electric_Range = 259
+WHERE Make = 'CHEVROLET'
+  AND Model = 'BOLT EV'
+  AND Electric_Vehicle_Type = 'BEV'
+  AND Electric_Range = 0;
+
+-- CHEVROLET VOLT: PHEV, correct range ~53 miles
+UPDATE ev_data
+  SET Electric_Range = 53
+WHERE Make = 'CHEVROLET'
+  AND Model = 'VOLT'
+  AND Electric_Vehicle_Type = 'BEV'
+  AND Electric_Range = 0;
+
+-- BMW i3: BEV (or BEV + Range-Extender option), correct range ~153 miles
+UPDATE ev_data
+  SET Electric_Range = 153
+WHERE Make = 'BMW'
+  AND Model = 'I3'
+  AND Electric_Vehicle_Type = 'BEV'
+  AND Electric_Range = 0;
+
+-- AUDI Q5 e: PHEV, correct range ~23 miles
+UPDATE ev_data
+  SET Electric_Range = 23
+WHERE Make = 'AUDI'
+  AND Model = 'Q5 E'
+  AND Electric_Vehicle_Type = 'BEV'
+  AND Electric_Range = 0;
+
+-- HYUNDAI BEVs
+UPDATE ev_data
+SET Electric_Range = 258
+WHERE Make = 'HYUNDAI' 
+	AND Model = 'KONA ELECTRIC' 
+	AND Electric_Range = 0 
+    AND Electric_Vehicle_Type = 'BEV';
+
+UPDATE ev_data
+SET Electric_Range = 303
+WHERE Make = 'HYUNDAI' 
+	AND Model = 'IONIQ 5' 
+    AND Electric_Range = 0 
+    AND Electric_Vehicle_Type = 'BEV';
+
+UPDATE ev_data
+SET Electric_Range = 305
+WHERE Make = 'HYUNDAI' 
+	AND Model = 'IONIQ 6' 
+    AND Electric_Range = 0 
+    AND Electric_Vehicle_Type = 'BEV';
+
+-- KIA BEVs
+UPDATE ev_data
+SET Electric_Range = 310
+WHERE Make = 'KIA' 
+	AND Model = 'EV6' 
+	AND Electric_Range = 0 
+    AND Electric_Vehicle_Type = 'BEV';
+
+UPDATE ev_data
+SET Electric_Range = 253
+WHERE Make = 'KIA' 
+	AND Model = 'NIRO' 
+	AND Electric_Range = 0 
+	AND Electric_Vehicle_Type = 'BEV';
+
+UPDATE ev_data
+SET Electric_Range = 111
+WHERE Make = 'KIA' 
+	AND Model = 'SOUL EV' 
+    AND Electric_Range = 0 
+    AND Electric_Vehicle_Type = 'BEV';
+
+-- FORD BEVs
+UPDATE ev_data
+SET Electric_Range = 270
+WHERE Make = 'FORD' 
+	AND Model = 'MUSTANG MACH-E' 
+    AND Electric_Range = 0 
+    AND Electric_Vehicle_Type = 'BEV';
+
+UPDATE ev_data
+SET Electric_Range = 126
+WHERE Make = 'FORD' 
+	AND Model = 'F-150' 
+	AND Electric_Range = 0 
+    AND Electric_Vehicle_Type = 'BEV';
+
+-- RIVIAN BEVs
+UPDATE ev_data
+SET Electric_Range = 314
+WHERE Make = 'RIVIAN' 
+	AND Model = 'R1T' 
+	AND Electric_Range = 0 
+    AND Electric_Vehicle_Type = 'BEV';
+
+UPDATE ev_data
+SET Electric_Range = 316
+WHERE Make = 'RIVIAN' 
+	AND Model = 'R1S' 
+    AND Electric_Range = 0 
+    AND Electric_Vehicle_Type = 'BEV';
+
+-- LUCID and POLESTAR
+UPDATE ev_data
+SET Electric_Range = 520
+WHERE Make = 'LUCID' 
+	AND Model = 'AIR' 
+	AND Electric_Range = 0 
+    AND Electric_Vehicle_Type = 'BEV';
+
+UPDATE ev_data
+SET Electric_Range = 270
+WHERE Make = 'POLESTAR' 
+	AND Model = 'PS2' 
+    AND Electric_Range = 0 
+    AND Electric_Vehicle_Type = 'BEV';
+
+-- VOLKSWAGEN BEVs
+UPDATE ev_data
+SET Electric_Range = 125
+WHERE Make = 'VOLKSWAGEN' 
+	AND Model = 'E-GOLF' 
+    AND Electric_Range = 0 
+    AND Electric_Vehicle_Type = 'BEV';
+
+UPDATE ev_data
+SET Electric_Range = 260
+WHERE Make = 'VOLKSWAGEN' 
+	AND Model = 'ID.4' 
+	AND Electric_Range = 0 
+    AND Electric_Vehicle_Type = 'BEV';
+
+-- Jaguar / Genesis / Mercedes BEVs
+UPDATE ev_data
+SET Electric_Range = 234
+WHERE Make = 'JAGUAR' 
+	AND Model = 'I-PACE' 
+	AND Electric_Range = 0 
+    AND Electric_Vehicle_Type = 'BEV';
+
+UPDATE ev_data
+SET Electric_Range = 236
+WHERE Make = 'GENESIS' 
+	AND Model = 'GV60' 
+    AND Electric_Range = 0 
+    AND Electric_Vehicle_Type = 'BEV';
+
+UPDATE ev_data
+SET Electric_Range = 305
+WHERE Make = 'MERCEDES-BENZ' 
+	AND Model = 'EQS-CLASS SEDAN' 
+    AND Electric_Range = 0 
+    AND Electric_Vehicle_Type = 'BEV';
+
+
+SET SQL_SAFE_UPDATES = 1;
+
+
+-- Create a cleaned copy of the table
+CREATE TABLE 2_Electric_Vehicle_Population_Clean AS
+SELECT *
+FROM ev_data;
+
+
+SELECT *
+INTO OUTFILE 'C:/Users/DellGadget/Desktop/CODEALPHA_ToolOverloadAnalytics/Data/2_Electric_Vehicle_Population_Clean.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+FROM `2_Electric_Vehicle_Population_Clean`;
+
+SHOW VARIABLES LIKE 'secure_file_priv';
+
+SELECT *
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/2_Electric_Vehicle_Population_Clean.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+FROM `2_Electric_Vehicle_Population_Clean`;
+
