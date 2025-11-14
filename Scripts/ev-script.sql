@@ -409,3 +409,227 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 FROM `2_Electric_Vehicle_Population_Clean`;
 
+
+-- Drop the old cleaned table 
+DROP TABLE IF EXISTS `2_Electric_Vehicle_Population_Clean`;
+
+USE ev_analysis;
+
+-- Drop the old table to save with header
+DROP TABLE IF EXISTS `2_Electric_Vehicle_Population_Clean`;
+
+CREATE TABLE `2_Electric_Vehicle_Population_Clean` AS
+SELECT `VIN_(1-10)`,
+       County,
+       City,
+       State,
+       Postal_Code,
+       Model_Year,
+       Make,
+       Model,
+       Electric_Vehicle_Type,
+       Clean_Alternative_Fuel_Vehicle_CAFV_Eligibility,
+       Electric_Range,
+       Base_MSRP,
+       Legislative_District,
+       DOL_Vehicle_ID,
+       Longitude,
+       Latitude,
+       Electric_Utility,
+       `2020_Census_Tract`
+FROM ev_data;
+
+
+SELECT 'VIN_(1-10)','County','City','State','Postal_Code','Model_Year','Make','Model','Electric_Vehicle_Type','Clean_Alternative_Fuel_Vehicle_CAFV_Eligibility','Electric_Range','Base_MSRP','Legislative_District','DOL_Vehicle_ID','Longitude','Latitude','Electric_Utility','2020_Census_Tract'
+UNION ALL
+SELECT `VIN_(1-10)`,
+       County,
+       City,
+       State,
+       Postal_Code,
+       Model_Year,
+       Make,
+       Model,
+       Electric_Vehicle_Type,
+       Clean_Alternative_Fuel_Vehicle_CAFV_Eligibility,
+       Electric_Range,
+       Base_MSRP,
+       Legislative_District,
+       DOL_Vehicle_ID,
+       Longitude,
+       Latitude,
+       Electric_Utility,
+       `2020_Census_Tract`
+FROM ev_data
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/2_Electric_Vehicle_Population_Clean.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+
+USE ev_analysis;
+
+
+CREATE TABLE ev_original_range (
+    Model_Year INT,
+    Make VARCHAR(100),
+    Model VARCHAR(150),
+    Electric_Vehicle_Type VARCHAR(100),
+    Electric_Range INT,
+    original_range INT,
+    original_range1 INT
+);
+
+
+
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/original_ranges_for_update.csv'
+INTO TABLE ev_original_range
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"' 
+IGNORE 1 ROWS
+(Model_Year, Make, Model, Electric_Vehicle_Type, Electric_Range, @original_range, @original_range1)
+SET 
+original_range = NULLIF(@original_range, ''),
+original_range1 = NULLIF(@original_range1, '');
+
+SELECT * FROM ev_analysis.ev_original_range;
+
+
+SELECT COUNT(*) AS blanks_now_null
+FROM ev_original_range
+WHERE original_range IS NULL OR original_range1 IS NULL;
+
+SET SQL_SAFE_UPDATES = 0;
+SET SQL_SAFE_UPDATES = 1;
+
+-- Update Electric_Range in ev_data using ev_original_range
+UPDATE ev_data AS e
+JOIN ev_original_range AS r
+  ON e.Model_Year = r.Model_Year
+ AND UPPER(e.Make) = UPPER(r.Make)
+ AND e.Model = r.Model
+ AND e.Electric_Vehicle_Type = r.Electric_Vehicle_Type
+SET e.Electric_Range = r.original_range1
+WHERE e.Model_Year = 2025;
+
+-- Update Electric_Range in ev_data using ev_original_range for 2023
+UPDATE ev_data AS e
+JOIN ev_original_range AS r
+  ON e.Model_Year = r.Model_Year
+ AND UPPER(e.Make) = UPPER(r.Make)
+ AND e.Model = r.Model
+ AND e.Electric_Vehicle_Type = r.Electric_Vehicle_Type
+SET e.Electric_Range = r.original_range1
+WHERE e.Model_Year = 2023;
+
+
+-- Update 1000 rows at a time
+UPDATE ev_data AS e
+JOIN ev_original_range AS r
+  ON e.Model_Year = r.Model_Year
+ AND UPPER(e.Make) = UPPER(r.Make)
+ AND e.Model = r.Model
+ AND e.Electric_Vehicle_Type = r.Electric_Vehicle_Type
+SET e.Electric_Range = r.original_range1
+WHERE e.Model_Year = 2023
+LIMIT 1000;
+
+-- To check how many rows are left
+SELECT COUNT(*) AS remaining
+FROM ev_data AS e
+JOIN ev_original_range AS r
+  ON e.Model_Year = r.Model_Year
+ AND UPPER(e.Make) = UPPER(r.Make)
+ AND e.Model = r.Model
+ AND e.Electric_Vehicle_Type = r.Electric_Vehicle_Type
+WHERE e.Model_Year = 2023
+  AND e.Electric_Range <> r.original_range1;
+
+
+-- list of all years that still need updating
+SELECT e.Model_Year, COUNT(*) AS rows_to_update
+FROM ev_data AS e
+JOIN ev_original_range AS r
+  ON e.Model_Year = r.Model_Year
+ AND UPPER(e.Make) = UPPER(r.Make)
+ AND e.Model = r.Model
+ AND e.Electric_Vehicle_Type = r.Electric_Vehicle_Type
+WHERE e.Electric_Range <> r.original_range1
+GROUP BY e.Model_Year
+ORDER BY e.Model_Year;
+
+UPDATE ev_data AS e
+JOIN ev_original_range AS r
+  ON e.Model_Year = r.Model_Year
+ AND UPPER(e.Make) = UPPER(r.Make)
+ AND e.Model = r.Model
+ AND e.Electric_Vehicle_Type = r.Electric_Vehicle_Type
+SET e.Electric_Range = r.original_range1
+WHERE e.Electric_Range < 5;
+
+-- extending timeout for reading data
+SET SESSION net_read_timeout = 600;   -- default is 30 seconds
+
+-- Wait longer for writing data
+SET SESSION net_write_timeout = 600;  -- default is 60 seconds
+
+
+
+-- Prepare a procedure to update in batches
+DELIMITER $$
+
+CREATE PROCEDURE update_ev_ranges()
+BEGIN
+    DECLARE done INT DEFAULT 0;
+    DECLARE y INT;
+
+    -- Cursor to iterate over all years present in ev_data
+    DECLARE year_cursor CURSOR FOR
+        SELECT DISTINCT Model_Year FROM ev_data ORDER BY Model_Year;
+
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
+
+    OPEN year_cursor;
+
+    year_loop: LOOP
+        FETCH year_cursor INTO y;
+        IF done THEN
+            LEAVE year_loop;
+        END IF;
+
+        -- Repeat updating 5000 rows at a time for this year until all are updated
+        update_loop: LOOP
+            UPDATE ev_data AS e
+            JOIN ev_original_range AS r
+              ON e.Model_Year = r.Model_Year
+             AND UPPER(e.Make) = UPPER(r.Make)
+             AND e.Model = r.Model
+             AND e.Electric_Vehicle_Type = r.Electric_Vehicle_Type
+            SET e.Electric_Range = r.original_range1
+            WHERE e.Model_Year = y
+              AND e.Electric_Range <> r.original_range1
+            LIMIT 5000;
+
+            -- Exit loop if no more rows need updating
+            IF ROW_COUNT() = 0 THEN
+                LEAVE update_loop;
+            END IF;
+        END LOOP update_loop;
+
+    END LOOP year_loop;
+
+    CLOSE year_cursor;
+END$$
+
+DELIMITER ;
+
+-- Run the procedure
+CALL update_ev_ranges();
+
+-- Drop the procedure after running
+DROP PROCEDURE update_ev_ranges;
+
+
+
+
+
