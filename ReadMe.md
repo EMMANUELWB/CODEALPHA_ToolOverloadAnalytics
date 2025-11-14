@@ -110,7 +110,7 @@ Both datasets were assessed and cleaned according to seven key data quality dime
 
 - ## Note on Electric Vehicle Range Data Correction
 
-During the analysis of the `ev_data2` dataset, it was observed that many EVs for model years 2021 to 2024 had unrealistic `Electric_Range` values, ranging from 0 to 223 miles. Modern EVs generally have ranges well above 150 miles, so these entries were clearly underreported or missing.
+During the analysis of the `ev_data2` dataset, I observed that many EVs for model years 2021 to 2024 had unrealistic `Electric_Range` values, ranging from 0 to 223 miles. Modern EVs generally have ranges well above 150 miles, so these entries were clearly underreported or missing.
 
 To enable meaningful analysis, the `Electric_Range` for these years was estimated based on typical EV ranges for the respective model years:
 
