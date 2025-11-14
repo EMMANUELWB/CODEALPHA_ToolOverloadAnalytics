@@ -185,14 +185,15 @@ This shows that **there has been no meaningful change in average EV range over t
 3. ### EV Price vs Range Analysis
 
 **Regression Equation:**  
-`Base MSRP = 0.0035 × Electric Range - 126.59`  
+`y = 0.0021x+13.3`  
 
-**R-value:** 0.58  
-**P-value:** 0.00437  
+**R-value:** 0.22  
+**P-value:** 0.27  
 
-**Interpretation:**  
-There is a moderate positive correlation (R = 0.58) between EV price and range, statistically significant (P = 0.00437).  
-This suggests that **EVs with longer ranges tend to be more expensive**, though other factors likely also influence pricing.
+**Interpretation:** 
+Here, we cannot reject the null hypothesis.
+
+This means there’s no statistically significant linear relationship between EV range and price.
    ![EV Price vs Range](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/blob/main/Reports/EV_Price_vs_Range_with_Regression.png)
 
 ---
