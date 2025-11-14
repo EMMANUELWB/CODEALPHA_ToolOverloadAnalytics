@@ -106,7 +106,25 @@ Both datasets were assessed and cleaned according to seven key data quality dime
 - [EV Cleaned Data (View on Google Sheet)](https://docs.google.com/spreadsheets/d/1bwQfKh6nN8H2uhL8yTBAc7N9ehSsqUqA-jrKhZ_N8Ug/edit?usp=sharing)  
 - [EV Cleaned Data (View)](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/raw/main/Data/2_Electric_Vehicle_Population_Clean.csv)  
 
-- [EV Cleaning Log (View)](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/blob/main/Data/3_EV_Data_Cleaning_Log.csv)  
+- [EV Cleaning Log (View)](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/blob/main/Data/3_EV_Data_Cleaning_Log.csv)
+
+- ## Note on Electric Vehicle Range Data Correction
+
+During the analysis of the `ev_data2` dataset, it was observed that many EVs for model years 2021 to 2024 had unrealistic `Electric_Range` values, ranging from 0 to 223 miles. Modern EVs generally have ranges well above 150 miles, so these entries were clearly underreported or missing.
+
+To enable meaningful analysis, the `Electric_Range` for these years was estimated based on typical EV ranges for the respective model years:
+
+| Model Year | Estimated Range (miles) |
+|------------|-------------------------|
+| 2021       | 250                     |
+| 2022       | 280                     |
+| 2023       | 300                     |
+| 2024       | 320                     |
+
+> **Disclaimer:** These values are estimates and have been applied only to entries with abnormally low ranges (<50 miles). All other data remain unchanged.  
+
+This correction allows for accurate calculation of averages, trends, and visualizations without distorting historical data.
+
 - [EV Profiling Report (HTML Download)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Reports/EV_Profile.html)  
 
 - [EV Adoption by Year (View CSV)](https://github.com/EMMANUELWB/CODEALPHA_ToolOverloadAnalytics/raw/main/Data/EV_Adoption_By_Year.csv)  
