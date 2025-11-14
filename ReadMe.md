@@ -172,14 +172,14 @@ On average, total EV adoption increases by approximately **2,203 vehicles per ye
 2. ### EV Range Trend Over Years
 
 **Regression Equation:**  
-`Average Electric Range = 232.43 - 0.0606 × Year`  
+y=-14828.13+7.4423x 
 
-**R-value:** -0.01  
-**P-value:** 0.97  
+R-value: 0.72 
+P-value: 0.00015 
 
-**Interpretation:**  
-The correlation between model year and average electric range is almost zero (R = -0.01) and not statistically significant (P = 0.97).  
-This shows that **there has been no meaningful change in average EV range over the years** in this dataset.
+**Interpretation:** 
+Average EV range has increased significantly over the years.
+The correlation is strong and positive
    ![EV Range Trend](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/blob/main/Reports/EV_Range_Trend_with_Regression.png)
 
 3. ### EV Price vs Range Analysis
