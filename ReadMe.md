@@ -198,6 +198,22 @@ This means there’s no statistically significant linear relationship between EV
 
 ---
 
+## 📊 CodeAlpha EV Analytics Dashboard
+
+A live interactive Tableau dashboard has been published to visualize key findings from the EV dataset, including:
+
+- Yearly EV adoption trends
+- Make/brand market share distribution
+- County-level EV penetration
+- Pricing and range analytics
+
+🔗 **Access the Dashboard:**  
+https://public.tableau.com/app/profile/emmanuel.agbo3961/viz/CodeAlphaEV-DASHBOARD/YearlyAdoption?publish=yes
+
+This dashboard is part of my CodeAlpha Data Analytics Internship deliverables, demonstrating practical competencies in data wrangling, exploratory analysis, and business intelligence reporting.
+
+---
+
 ## Tools Used
 - **R** for data cleaning, profiling, and transformation.  
 - **SQL (MySQL)** for querying insights.  
@@ -205,8 +221,3 @@ This means there’s no statistically significant linear relationship between EV
 - **Tableau** for visualization and storytelling.  
 
 ---
-## Languages Used
-- R
-- SQL
----
-
