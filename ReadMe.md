@@ -198,7 +198,7 @@ This means there’s no statistically significant linear relationship between EV
 
 ---
 
-## 📊 CodeAlpha EV Analytics Dashboard
+## 📊 CodeAlpha EV Analytics Story
 
 A live interactive Tableau dashboard has been published to visualize key findings from the EV dataset, including:
 
