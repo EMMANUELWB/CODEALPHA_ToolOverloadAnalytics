@@ -206,10 +206,10 @@ A live interactive Tableau dashboard has been published to visualize key finding
 - Make/brand market share distribution
 - County-level EV penetration
 - Pricing and range analytics
-
-🔗 **Access the Dashboard:** 
  
-![EV DASHBOARD](https://public.tableau.com/app/profile/emmanuel.agbo3961/viz/CodeAlphaEV-DASHBOARD/YearlyAdoption?publish=yes)
+🔗 **Open the interactive dashboard:**  
+[CodeAlpha EV Dashboard — Yearly Adoption](https://public.tableau.com/app/profile/emmanuel.agbo3961/viz/CodeAlphaEV-DASHBOARD/YearlyAdoption?publish=yes)
+
 
 This dashboard is part of my CodeAlpha Data Analytics Internship deliverables, demonstrating practical competencies in data wrangling, exploratory analysis, and business intelligence reporting.
 
