@@ -208,7 +208,7 @@ A live interactive Tableau dashboard has been published to visualize key finding
 - Pricing and range analytics
  
 🔗 **Open the interactive dashboard:**  
-[CodeAlpha EV Dashboard — Yearly Adoption](https://public.tableau.com/app/profile/emmanuel.agbo3961/viz/CodeAlphaEV-DASHBOARD/YearlyAdoption?publish=yes)
+[CodeAlpha EV Dashboard - Yearly Adoption](https://public.tableau.com/app/profile/emmanuel.agbo3961/viz/CodeAlphaEV-DASHBOARD/YearlyAdoption?publish=yes)
 
 
 This dashboard is part of my CodeAlpha Data Analytics Internship deliverables, demonstrating practical competencies in data wrangling, exploratory analysis, and business intelligence reporting.
