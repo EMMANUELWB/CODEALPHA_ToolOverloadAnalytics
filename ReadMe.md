@@ -108,7 +108,7 @@ Both datasets were assessed and cleaned according to seven key data quality dime
 
 - [EV Cleaning Log (View)](https://github.com/EMMANUELWB/CodeAlpha__EV-Infrastructure-vs.-Adoption-A-Data-Driven-Exploration/blob/main/Data/3_EV_Data_Cleaning_Log.csv)
 
-- ## Note on Electric Vehicle Range Data Correction
+- ## Note on Electric Vehicle Range Data Correction during `EDA`
 
 During the analysis of the `ev_data2` dataset, I observed that many EVs for model years 2021 to 2024 had unrealistic `Electric_Range` values, ranging from 0 to 223 miles. Modern EVs generally have ranges well above 150 miles, so these entries were clearly underreported or missing.
 
